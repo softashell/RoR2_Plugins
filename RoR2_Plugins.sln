@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomStart", "RandomStart\RandomStart.csproj", "{8EB79342-7521-444C-A772-3CF1BDF96DF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bandit", "Bandit\Bandit.csproj", "{7358F9E0-E5CB-42ED-ADF9-516CFD53942B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeFOV", "ChangeFOV\ChangeFOV.csproj", "{98AE4B7F-94C7-4792-9BAC-8BC4E0638791}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EB79342-7521-444C-A772-3CF1BDF96DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB79342-7521-444C-A772-3CF1BDF96DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB79342-7521-444C-A772-3CF1BDF96DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB79342-7521-444C-A772-3CF1BDF96DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7358F9E0-E5CB-42ED-ADF9-516CFD53942B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7358F9E0-E5CB-42ED-ADF9-516CFD53942B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7358F9E0-E5CB-42ED-ADF9-516CFD53942B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7358F9E0-E5CB-42ED-ADF9-516CFD53942B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98AE4B7F-94C7-4792-9BAC-8BC4E0638791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98AE4B7F-94C7-4792-9BAC-8BC4E0638791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98AE4B7F-94C7-4792-9BAC-8BC4E0638791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98AE4B7F-94C7-4792-9BAC-8BC4E0638791}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23F92714-D994-428F-98F6-2F23419A317F}
+	EndGlobalSection
+EndGlobal
