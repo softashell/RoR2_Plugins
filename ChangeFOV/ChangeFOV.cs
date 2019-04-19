@@ -13,6 +13,7 @@ namespace ChangeFOV
         private static ConfigWrapper<int> ConfigBaseFOV { get; set; }
         private static ConfigWrapper<bool> ConfigStatic { get; set; }
         private static ConfigWrapper<bool> ConfigStaticSensivity { get; set; }
+        private static ConfigWrapper<bool> ConfigParticles { get; set; }
 
         public void Awake()
         {
@@ -40,12 +41,12 @@ namespace ChangeFOV
                 };
             }
 
-            if (ConfigStaticSensivity.Value)
+            IL.RoR2.CameraRigController.Update += (il) =>
             {
-                IL.RoR2.CameraRigController.Update += (il) =>
-                {
-                    var c = new ILCursor(il);
+                var c = new ILCursor(il);
 
+                if (ConfigStaticSensivity.Value)
+                {
                     // Don't reduce mouse sensivity while sprinting
                     c.Goto(696);
                     c.Remove();
@@ -53,8 +54,15 @@ namespace ChangeFOV
                     c.Goto(700);
                     c.Remove();
                     c.Emit(OpCodes.Ldc_R4, 1f);
-                };
-            }
+                }
+
+                if (!ConfigParticles.Value)
+                {
+                    // Disable sprinting particle effect
+                    c.Goto(720);
+                    c.RemoveRange(4);
+                }
+            };
         }
 
         private void InitConfig()
@@ -75,6 +83,12 @@ namespace ChangeFOV
                 section: "Sensivity",
                 key: "Static",
                 description: "Don't reduce sensivity while sprinting",
+                defaultValue: true);
+
+            ConfigParticles = Config.Wrap(
+                section: "Misc",
+                key: "Particles",
+                description: "Toggle sprinting particle effect",
                 defaultValue: true);
         }
     }
